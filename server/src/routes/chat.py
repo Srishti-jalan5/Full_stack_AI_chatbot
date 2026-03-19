@@ -107,4 +107,4 @@ async def websocket_endpoint(websocket: WebSocket, token: str = Depends(get_toke
                     await consumer.delete_message(stream_channel="response_channel", message_id=message[0].decode('utf-8'))
 
     except WebSocketDisconnect:
-        manager.disconnect(websocket)
+        manager.disconnect(websocket) 
